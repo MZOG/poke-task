@@ -20,7 +20,7 @@ export default function FormSearchExamples() {
   return (
     <div className="mb-5">
       <p className="text-sm text-gray-500">examples:</p>
-      <ul className="w-full flex gap-3">
+      <ul className="w-full flex gap-3 flex-wrap">
         {examples.map((pokemon, index) => {
           return (
             <Link
