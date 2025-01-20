@@ -4,7 +4,7 @@ type FormInputProps = {
 
 const FormInput = ({ onChange }: FormInputProps) => {
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
-    onChange(e.target.value);
+    onChange(e.target.value.toLowerCase());
   };
 
   return (
@@ -14,6 +14,7 @@ const FormInput = ({ onChange }: FormInputProps) => {
       </label>
       <input
         required
+        autoComplete="off"
         onChange={handleChange}
         name="name"
         placeholder="Search for pokemon"
