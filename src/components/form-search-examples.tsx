@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { usePathname } from 'next/navigation'
 
 const examples = [
   "charmander",
@@ -14,6 +15,8 @@ const examples = [
 ];
 
 export default function FormSearchExamples() {
+  const pathname = usePathname();
+
   return (
     <div className="mb-5">
       <p className="text-sm text-gray-500">examples:</p>
@@ -22,7 +25,7 @@ export default function FormSearchExamples() {
           return (
             <Link
               key={index}
-              className="hover:underline underline-offset-2 capitalize text-sm"
+              className={`hover:underline underline-offset-2 capitalize text-sm ${pathname === `/pokemon/${pokemon}` && 'text-indigo-600'}`}
               href={`/pokemon/${pokemon}`}
             >
               {pokemon}

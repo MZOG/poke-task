@@ -13,6 +13,7 @@ const FormInput = ({ onChange }: FormInputProps) => {
         Search
       </label>
       <input
+        required
         onChange={handleChange}
         name="name"
         placeholder="Search for pokemon"

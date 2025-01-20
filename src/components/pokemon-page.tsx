@@ -63,8 +63,8 @@ export default function PokemonPage() {
       {pokemon && (
         <div className="flex flex-col gap-5 items-center justify-center border p-5 rounded-xl">
           <h1 className="text-xl capitalize">{pokemonName}</h1>
-          <div className="relative w-36 h-36">
-            <Image src={pokemonImage} alt={pokemonName} fill />
+          <div className="relative w-44 h-44">
+            <Image priority src={pokemonImage} alt={pokemonName} fill />
           </div>
         </div>
       )}
